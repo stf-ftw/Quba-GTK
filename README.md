@@ -12,6 +12,14 @@ It keeps the original Quba invoice transformation pipeline for structured invoic
 - Support file-manager "Open With" integration through the desktop file.
 - Use English or Romanian automatically based on the system locale.
 
+## Screenshots
+
+![Welcome view](screenshots/1.png)
+
+![Structured invoice view](screenshots/2.png)
+
+![About/details view](screenshots/3.png)
+
 ## Project Layout
 
 - `src/`: Rust GTK4/libadwaita application.
@@ -94,3 +102,7 @@ This mixed distribution is intentional and compatible with GPLv3. The Apache Sof
 - https://www.gnu.org/licenses/license-list.html
 
 For a short repository-specific notice, see [NOTICE](https://github.com/stf-ftw/Quba-GTK/blob/main/NOTICE).
+
+## Acknowledgement
+
+This project includes AI-generated code made with OpenAI's Codex, reviewed and adapted for this rewrite.
