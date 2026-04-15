@@ -93,4 +93,4 @@ This mixed distribution is intentional and compatible with GPLv3. The Apache Sof
 - https://www.apache.org/foundation/license-faq.html
 - https://www.gnu.org/licenses/license-list.html
 
-For a short repository-specific notice, see [NOTICE](/home/stefan/Projects/quba-gtk/NOTICE).
+For a short repository-specific notice, see [NOTICE](https://github.com/stf-ftw/Quba-GTK/blob/main/NOTICE).
