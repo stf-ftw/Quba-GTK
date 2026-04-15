@@ -67,7 +67,7 @@ gtk-launch org.zugferd.QubaViewer
 
 ## Flatpak
 
-The Flatpak manifest lives at [flatpak/org.zugferd.QubaViewer.json](/home/stefan/Projects/quba-gtk/flatpak/org.zugferd.QubaViewer.json).
+The Flatpak manifest lives at [`flatpak/org.zugferd.QubaViewer.json`](flatpak/org.zugferd.QubaViewer.json).
 
 Build locally with:
 
@@ -101,7 +101,7 @@ This mixed distribution is intentional and compatible with GPLv3. The Apache Sof
 - https://www.apache.org/foundation/license-faq.html
 - https://www.gnu.org/licenses/license-list.html
 
-For a short repository-specific notice, see [NOTICE](https://github.com/stf-ftw/Quba-GTK/blob/main/NOTICE).
+For a short repository-specific notice, see [`NOTICE`](NOTICE).
 
 ## Acknowledgement
 
