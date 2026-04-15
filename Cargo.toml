@@ -1,0 +1,18 @@
+[package]
+name = "quba_gtk"
+version = "0.1.0"
+edition = "2024"
+description = "GTK4/libadwaita invoice viewer for XML bills and hybrid PDFs"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/stf-ftw/Quba-GTK"
+
+[dependencies]
+adw = { package = "libadwaita", version = "0.9", features = ["v1_8"] }
+anyhow = "1.0"
+gtk = { package = "gtk4", version = "0.11", features = ["v4_10"] }
+html2text = "0.13"
+quick-xml = "0.38"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sourceview5 = "0.11"
+webkit6 = "0.6"

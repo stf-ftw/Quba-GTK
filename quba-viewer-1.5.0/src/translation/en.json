@@ -1,0 +1,23 @@
+{
+    "showXML": "Show embedded XML",
+    "welcomeNote1": "Open electronic invoice XML- or PDF-file ",
+    "welcomeNote2": "from the menu or by pressing Ctrl + O or drag & drop it.",
+    "appName": "E-Invoice Viewer",
+    "Examples":"Examples",
+    "Valid file": "Valid File",
+    "Invalid file": "Invalid File",
+    "Success": "Success",
+    "validateFiles": "You can now validate files",
+    "Show more": "Show more...",
+    "Logout success": "Logged out successfully",
+    "serverunreachable":"Network error",
+    "invalidcredentials":"Invalid username or password",
+    "validatingFile": "Validating File...",
+    "notLoggedIn":"You are not logged in, please log in and try again",
+    "search":"Search",
+    "search_next":"Next",
+    "search_prev":"Previous",
+    "display_ids": "Display BT-IDs",
+    "save_credentials": "Save credentials"
+
+}

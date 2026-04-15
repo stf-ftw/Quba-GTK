@@ -1,0 +1,20 @@
+{
+  "name": "quba-gtk-helper",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Helper tooling for Quba GTK invoice rendering compatibility",
+  "scripts": {
+    "bundle-helper": "esbuild scripts/quba-render-helper.cjs --bundle --platform=node --format=cjs --external:canvas --outfile=dist/quba-render-helper.bundle.cjs",
+    "helper:xml": "node scripts/quba-render-helper.cjs render-xml",
+    "helper:pdf": "node scripts/quba-render-helper.cjs render-pdf"
+  },
+  "dependencies": {
+    "fast-xml-parser": "3.19.0",
+    "jsdom": "^23.0.1",
+    "pdfjs-dist": "2.9.359",
+    "saxon-js": "2.4.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}

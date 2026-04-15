@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Quba GTK
+Comment=Open XML bills and hybrid invoice PDFs
+Exec=quba_gtk %U
+Icon=org.zugferd.QubaViewer
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Office;Viewer;
+MimeType=application/pdf;text/xml;application/xml;
+Keywords=invoice;xml;pdf;zugferd;factur-x;xrechnung;

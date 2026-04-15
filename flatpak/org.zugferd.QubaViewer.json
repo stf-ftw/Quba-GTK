@@ -1,0 +1,83 @@
+{
+  "app-id": "org.zugferd.QubaViewer",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "49",
+  "sdk": "org.gnome.Sdk",
+  "command": "quba_gtk",
+  "build-options": {
+    "no-debuginfo": true
+  },
+  "cleanup": [
+    "/lib/rust"
+  ],
+  "finish-args": [
+    "--share=network",
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--filesystem=host:ro"
+  ],
+  "modules": [
+    {
+      "name": "rust-toolchain",
+      "buildsystem": "simple",
+      "build-commands": [
+        "./install.sh --prefix=/app/lib/rust --disable-ldconfig"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://static.rust-lang.org/dist/2026-03-26/rust-1.94.1-x86_64-unknown-linux-gnu.tar.xz",
+          "sha256": "294b3d81fa72e62581276290c60c81eb8b58498d333d422ca1dfc432877d0c40",
+          "only-arches": [
+            "x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "nodejs",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p /app/bin",
+        "mkdir -p /app/lib/nodejs/node-v22.22.0-linux-x64",
+        "cp -a ./* /app/lib/nodejs/node-v22.22.0-linux-x64/",
+        "ln -sf /app/lib/nodejs/node-v22.22.0-linux-x64/bin/node /app/bin/node"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://nodejs.org/dist/v22.22.0/node-v22.22.0-linux-x64.tar.xz",
+          "sha256": "9aa8e9d2298ab68c600bd6fb86a6c13bce11a4eca1ba9b39d79fa021755d7c37",
+          "only-arches": [
+            "x86_64"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "quba-gtk",
+      "buildsystem": "simple",
+      "build-commands": [
+        "env PATH=/app/lib/rust/bin:/usr/bin:/bin cargo build --release --locked --offline",
+        "install -Dm755 target/release/quba_gtk /app/bin/quba_gtk-real",
+        "install -Dm755 /dev/stdin /app/bin/quba_gtk <<'EOF'\n#!/usr/bin/env sh\nset -eu\nexport QUBA_PROJECT_ROOT=/app/share/quba-gtk\nexport QUBA_NODE_BINARY=/app/bin/node\nexec /app/bin/quba_gtk-real \"$@\"\nEOF",
+        "install -Dm644 data/org.zugferd.QubaViewer.desktop /app/share/applications/org.zugferd.QubaViewer.desktop",
+        "install -Dm644 data/org.zugferd.QubaViewer.metainfo.xml /app/share/metainfo/org.zugferd.QubaViewer.metainfo.xml",
+        "install -Dm644 quba-viewer-1.5.0/src/assets/img/logo_small_icon_only.png /app/share/icons/hicolor/512x512/apps/org.zugferd.QubaViewer.png",
+        "install -Dm644 dist/quba-render-helper.bundle.cjs /app/share/quba-gtk/dist/quba-render-helper.bundle.cjs",
+        "cp -a quba-viewer-1.5.0 /app/share/quba-gtk/quba-viewer-1.5.0",
+        "install -Dm644 LICENSE /app/share/licenses/org.zugferd.QubaViewer/LICENSE",
+        "install -Dm644 NOTICE /app/share/licenses/org.zugferd.QubaViewer/NOTICE",
+        "install -Dm644 quba-viewer-1.5.0/LICENSE /app/share/licenses/org.zugferd.QubaViewer/LICENSE.Apache-2.0",
+        "install -Dm644 quba-viewer-1.5.0/NOTICE /app/share/licenses/org.zugferd.QubaViewer/NOTICE.Apache-2.0"
+      ],
+      "sources": [
+        {
+          "type": "dir",
+          "path": ".."
+        }
+      ]
+    }
+  ]
+}

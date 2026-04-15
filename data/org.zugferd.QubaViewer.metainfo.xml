@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.zugferd.QubaViewer</id>
+  <name>Quba GTK</name>
+  <summary>Native GTK invoice viewer for XML and hybrid PDF bills</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later AND Apache-2.0</project_license>
+  <description>
+    <p>Quba GTK is a native GTK4/libadwaita rewrite of the Quba electronic invoice viewer.</p>
+    <p>It opens XML invoice documents directly, extracts embedded XML from hybrid PDF invoices, and reuses the original Quba transformation assets for the structured invoice view.</p>
+  </description>
+  <launchable type="desktop-id">org.zugferd.QubaViewer.desktop</launchable>
+  <url type="homepage">https://quba-viewer.org</url>
+  <url type="bugtracker">https://github.com/stf-ftw/Quba-GTK/issues</url>
+  <categories>
+    <category>Office</category>
+    <category>Viewer</category>
+  </categories>
+  <content_rating type="oars-1.1"/>
+</component>

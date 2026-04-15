@@ -1,0 +1,11 @@
+Quba GTK
+Copyright 2026 stf_ftw
+
+This repository contains two licensing layers:
+
+1. The native rewrite code in `src/`, `data/`, `flatpak/`, `docs/`, and project scripts is licensed under GPL-3.0-or-later.
+2. Bundled upstream Quba assets in `quba-viewer-1.5.0/` remain under their original Apache-2.0 license and NOTICE terms.
+
+The Apache-licensed upstream assets are preserved because Quba GTK reuses Quba's invoice transformation pipeline, including XSLT assets and compatibility helper logic.
+
+Please keep `quba-viewer-1.5.0/LICENSE` and `quba-viewer-1.5.0/NOTICE` when redistributing builds or source trees that include those upstream files.
