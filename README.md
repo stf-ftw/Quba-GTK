@@ -1,6 +1,6 @@
 # Quba GTK
 
-Quba GTK is a GTK4/libadwaita rewrite of Quba, focused on opening XML invoices and hybrid invoice PDFs on Linux desktops.
+Quba GTK is a GTK4/libadwaita rewrite of [Quba](https://github.com/ZUGFeRD/quba-viewer), focused on opening XML invoices and hybrid invoice PDFs on Linux desktops.
 
 It keeps the original Quba invoice transformation pipeline for structured invoice rendering, while replacing the Electron shell with a native Rust application that supports direct file opening, desktop integration, and Flatpak packaging.
 
